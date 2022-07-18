@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 #include <stdlib.h>
 
@@ -61,27 +60,17 @@ int main()
                 risultato *= numeri[i];
 
             break;
+ /= numeri[i];
 
-        case '/':
 
-            for(int i = 0; i < numeroInserito; i++)
+            
 
-                risultato /= numeri[i];
 
-            break;
 
-        default:
+           
 
-            printf("Operatore '%c' non valido\n", segno);
+   
 
-            goto error;
 
-            break;
 
-    }
 
-    printf("Il risultato è %f\n", risultato);
-
-    return 0;
-
-}
