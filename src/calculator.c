@@ -5,7 +5,7 @@ int Tabellina(int risulato,int numeroInserito,char segno);
 
 int main()
 {
-	char f;
+
    
 	int valore;
 	int numeroInserito = 0;
@@ -60,12 +60,13 @@ int main()
 			printf("Operatore '%c' non valido\n", segno);
 		}
 	}
-	printf("Il risultato è %f\n", risultato);
+	printf("Il risultato del'operazione: %f\n", risultato);
 
 
 	Tabellina(risultato,numeroInserito,segno);
-	scanf("%c",&f);
 	}
+
+ 	system("pause");
 
 }
 
@@ -77,3 +78,4 @@ int Tabellina(int risulato,int numeroInserito,char segno)
 	printf("Valore del risultato: |  %d  |",risulato);
     printf(" Segno inserito: |  %c  |",segno);
 }
+
