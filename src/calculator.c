@@ -1,11 +1,12 @@
-##include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-    int numeroInserito; 
-    char segno;
+    int numeroInserito = 0; 
+    char segno = ' ';
     float risultato = 0;
+	
 
     printf("Quanti numeri voi inserire per fare il calcolo?: ");
     scanf("%d",&numeroInserito);
@@ -17,34 +18,28 @@ int main()
         printf("Inserisci il numero %d: ",i);
         scanf("%f",&numeri[i]);
     }
-	int i = 0;
-	do{
-		printf("Che operatore voi usare per fare il calcolo tra i numeri scelti?: ");
-		scanf(" %c", &segno);
-		switch(segno)
-		{
-			case '+':
-				risultato += numeri[i];
-				i++;
-				break;
-			case '-':
-				risultato -= numeri[i];
-				i++;
-				break;
-			case '*':
-					risultato *= numeri[i];
-					i++;
-				break;
-			case '/':
-				risultato /= numeri[i];
-				i++;
-				break;
-			default:
-				printf("Operatore '%c' non valido\n", segno);
-				//break; il break nel default Ã¨ inutile
-		}
-	} while (i < numeroInserito);
-    printf("Il risultato Ã¨ %f\n", risultato);
+ 	int i = 1;
+ 		if (numeroInserito > 0) 
+		risultato = numeri[0];
+ 			while(i<numeroInserito) {
+  			printf("Che operatore voi usare per fare il calcolo tra i numeri scelti?: ");
+  			scanf(" %c", &segno);
+  		switch(segno)
+  		{
+  		 	case '+':
+    			risultato += numeri[i];
+    			i++;
+   			 break;
+   			case '-':
+    			risultato -= numeri[i];
+   				 i++;
+    		break;
+
+   			default:
+   		 printf("Operatore '%c' non valido\n", segno);
+  }
+ }
+    printf("Il risultato è %f\n", risultato);
 
     return 0;
 }
