@@ -41,5 +41,5 @@ int main()
  }
     printf("Il risultato è %f\n", risultato);
 
-    return 0;
+
 }
